@@ -32,6 +32,8 @@
   .artigo-autor {
      font-weight: bold;
   }
+  
+  /* ESTILOS DOS BOTÕES */
   .botoes-reacao {
      display: flex;
      gap: 10px;
@@ -76,12 +78,41 @@
                 <p class="artigo-autor">Por: Alexandre de Moraes</p>
                 <p>Boas-vindas ao meu blog bacana, aqui falaremos sobre bandas que gosto</p>
                 
-                <!-- BOTÕES ADICIONADOS AQUI -->
+                <!-- BOTÕES COM IDS E SPANS PARA A NUMERAÇÃO -->
                 <div class="botoes-reacao">
-                    <button class="btn btn-like">👍 Like</button>
-                    <button class="btn btn-dislike">👎 Dislike</button>
+                    <button class="btn btn-like" id="btn-like">
+                        👍 Like (<span id="num-likes">0</span>)
+                    </button>
+                    <button class="btn btn-dislike" id="btn-dislike">
+                        👎 Dislike (<span id="num-dislikes">0</span>)
+                    </button>
                 </div>
             </div>
         </main>
+
+    <!-- SCRIPT JAVASCRIPT QUE FAZ A CONTAGEM FUNCIONAR -->
+    <script>
+        // Criando as variáveis para guardar a quantidade de cliques
+        let qtdLikes = 0;
+        let qtdDislikes = 0;
+
+        // Pegando os elementos do HTML
+        const botaoLike = document.getElementById('btn-like');
+        const botaoDislike = document.getElementById('btn-dislike');
+        const spanLikes = document.getElementById('num-likes');
+        const spanDislikes = document.getElementById('num-dislikes');
+
+        // Função para quando clicar em Like
+        botaoLike.addEventListener('click', () => {
+            qtdLikes++; // Soma +1
+            spanLikes.innerText = qtdLikes; // Atualiza o número na tela
+        });
+
+        // Função para quando clicar em Dislike
+        botaoDislike.addEventListener('click', () => {
+            qtdDislikes++; // Soma +1
+            spanDislikes.innerText = qtdDislikes; // Atualiza o número na tela
+        });
+    </script>
 </body> 
 </html>
