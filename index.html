@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +66,7 @@
 </head>
   <body>
         <header>
-            <h1>Meu blog tech</h1>
+            <h1>Meu bog sobre bandas</h1>
             <p>Vou mostrar minhas bandas favoritas, o porquê e o meu álbum favorito de cada uma</p> 
         </header>
         
@@ -75,10 +75,9 @@
             
             <div>  
                 <h2>Meu primeiro post</h2> 
-                <p class="artigo-autor">Por: Alexandre de Moraes</p>
+                <p class="artigo-autor">Por: Alexandre de Morais</p>
                 <p>Boas-vindas ao meu blog bacana, aqui falaremos sobre bandas que gosto</p>
                 
-                <!-- BOTÕES COM IDS E SPANS PARA A NUMERAÇÃO -->
                 <div class="botoes-reacao">
                     <button class="btn btn-like" id="btn-like">
                         👍 Like (<span id="num-likes">0</span>)
@@ -90,25 +89,20 @@
             </div>
         </main>
 
-    <!-- SCRIPT JAVASCRIPT QUE FAZ A CONTAGEM FUNCIONAR -->
     <script>
-        // Criando as variáveis para guardar a quantidade de cliques
         let qtdLikes = 0;
         let qtdDislikes = 0;
 
-        // Pegando os elementos do HTML
         const botaoLike = document.getElementById('btn-like');
         const botaoDislike = document.getElementById('btn-dislike');
         const spanLikes = document.getElementById('num-likes');
         const spanDislikes = document.getElementById('num-dislikes');
 
-        // Função para quando clicar em Like
         botaoLike.addEventListener('click', () => {
             qtdLikes++; // Soma +1
             spanLikes.innerText = qtdLikes; // Atualiza o número na tela
         });
 
-        // Função para quando clicar em Dislike
         botaoDislike.addEventListener('click', () => {
             qtdDislikes++; // Soma +1
             spanDislikes.innerText = qtdDislikes; // Atualiza o número na tela
