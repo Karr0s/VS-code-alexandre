@@ -32,6 +32,36 @@
   .artigo-autor {
      font-weight: bold;
   }
+  
+  /* ESTILOS DOS BOTÕES */
+  .botoes-reacao {
+     display: flex;
+     gap: 10px;
+     margin-top: 15px;
+  }
+  .btn {
+     padding: 8px 16px;
+     font-size: 14px;
+     border: 2px solid #000000;
+     border-radius: 4px;
+     cursor: pointer;
+     font-weight: bold;
+     transition: background-color 0.2s;
+  }
+  .btn-like {
+     background-color: #4CAF50;
+     color: white;
+  }
+  .btn-like:hover {
+     background-color: #45a049;
+  }
+  .btn-dislike {
+     background-color: #f44336;
+     color: white;
+  }
+  .btn-dislike:hover {
+     background-color: #da190b;
+  }
 </style>   
 </head>
   <body>
@@ -47,6 +77,12 @@
                 <h2>Meu primeiro post</h2> 
                 <p class="artigo-autor">Por: Alexandre de Moraes</p>
                 <p>Boas-vindas ao meu blog bacana, aqui falaremos sobre bandas que gosto</p>
+                
+                <!-- BOTÕES ADICIONADOS AQUI -->
+                <div class="botoes-reacao">
+                    <button class="btn btn-like">👍 Like</button>
+                    <button class="btn btn-dislike">👎 Dislike</button>
+                </div>
             </div>
         </main>
 </body> 
