@@ -122,14 +122,15 @@
     </main>
 
     <script>
-        const botoes = document.querySelectorAll('.btn');
+      botoes.forEach(function(botao) {
+botao.addEventListener("click", botaoClicado);
 
-        botoes.forEach((botao) => {
-            botao.addEventListener('click', () => {
-                const contador = botao.querySelector('span');
-                contador.textContent = parseInt(contador.textContent) + 1;
-            });
-        });
+function botaoClicado() {
+console.log("fui clicado");
+let texto = botao.querySelector("span");
+texto.textContent++;
+}
+});
     </script>
 </body> 
 </html>
